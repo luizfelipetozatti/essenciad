@@ -14,7 +14,7 @@ export default function AdminLoginPage() {
           </div>
           <div className="flex items-center justify-center gap-2">
             <Building2 className="w-6 h-6 text-slate-700" />
-            <CardTitle className="text-2xl font-bold">Damha Coworking</CardTitle>
+            <CardTitle className="text-2xl font-bold">Essência D</CardTitle>
           </div>
           <CardDescription className="text-base">
             Login Administrativo - Área Restrita
@@ -28,7 +28,7 @@ export default function AdminLoginPage() {
             <Input
               id="email"
               type="email"
-              placeholder="admin@damhacoworking.com.br"
+              placeholder="admin@essenciad.com.br"
               className="w-full"
             />
           </div>

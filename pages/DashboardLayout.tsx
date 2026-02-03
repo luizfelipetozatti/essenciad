@@ -44,7 +44,7 @@ export default function DashboardLayout() {
               <Building2 className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-slate-900">Damha Admin</h1>
+              <h1 className="text-lg font-bold text-slate-900">Essência D Admin</h1>
               <p className="text-xs text-slate-500">Painel de Controle</p>
             </div>
           </div>

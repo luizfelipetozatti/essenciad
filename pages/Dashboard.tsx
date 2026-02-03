@@ -1,4 +1,4 @@
-import { CalendarCheck, DoorOpen, UserPlus, MoreHorizontal } from "lucide-react";
+import { CalendarCheck, Sparkles, UserPlus, MoreHorizontal, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,14 +20,14 @@ const metricsData = [
     bgColor: "bg-blue-50",
   },
   {
-    title: "Salas Ocupadas Agora",
-    value: "3/5",
-    icon: DoorOpen,
+    title: "Atendimentos em Andamento",
+    value: "3",
+    icon: Clock,
     iconColor: "text-green-600",
     bgColor: "bg-green-50",
   },
   {
-    title: "Novos Clientes (Mês)",
+    title: "Novas Clientes (Mês)",
     value: "28",
     icon: UserPlus,
     iconColor: "text-purple-600",
@@ -39,37 +39,44 @@ const agendamentosData = [
   {
     id: 1,
     cliente: "Maria Silva",
-    sala: "Consultório Odontológico",
-    dataHora: "02/02 - 14:00h",
+    servico: "Limpeza de Pele Profunda",
+    dataHora: "03/02 - 14:00h",
     status: "confirmado",
   },
   {
     id: 2,
-    cliente: "João Santos",
-    sala: "Sala Terapêutica",
-    dataHora: "02/02 - 15:30h",
+    cliente: "Juliana Santos",
+    servico: "Harmonização Facial",
+    dataHora: "03/02 - 15:30h",
     status: "confirmado",
   },
   {
     id: 3,
     cliente: "Ana Costa",
-    sala: "Sala de Estética",
-    dataHora: "02/02 - 16:00h",
+    servico: "Microagulhamento",
+    dataHora: "03/02 - 16:00h",
     status: "pendente",
   },
   {
     id: 4,
-    cliente: "Pedro Oliveira",
-    sala: "Consultório de Psicologia",
-    dataHora: "03/02 - 09:00h",
+    cliente: "Patrícia Oliveira",
+    servico: "Peeling Químico",
+    dataHora: "04/02 - 09:00h",
     status: "confirmado",
   },
   {
     id: 5,
     cliente: "Carla Mendes",
-    sala: "Consultório Odontológico",
-    dataHora: "03/02 - 10:30h",
-    status: "cancelado",
+    servico: "Botox e Preenchimento",
+    dataHora: "04/02 - 10:30h",
+    status: "confirmado",
+  },
+  {
+    id: 6,
+    cliente: "Renata Alves",
+    servico: "Drenagem Linfática Facial",
+    dataHora: "04/02 - 14:00h",
+    status: "pendente",
   },
 ];
 
@@ -98,7 +105,7 @@ export default function DashboardPage() {
       <div>
         <h1 className="text-3xl font-bold text-slate-900">Visão Geral do Dia</h1>
         <p className="text-slate-500 mt-1">
-          Bem-vinda ao painel administrativo do Damha Coworking
+          Bem-vinda ao painel administrativo da Essência D
         </p>
       </div>
 
@@ -134,7 +141,7 @@ export default function DashboardPage() {
             <TableHeader>
               <TableRow>
                 <TableHead className="font-semibold">Cliente</TableHead>
-                <TableHead className="font-semibold">Sala</TableHead>
+                <TableHead className="font-semibold">Serviço</TableHead>
                 <TableHead className="font-semibold">Data/Hora</TableHead>
                 <TableHead className="font-semibold">Status</TableHead>
                 <TableHead className="text-right font-semibold">Ações</TableHead>
@@ -146,7 +153,7 @@ export default function DashboardPage() {
                 return (
                   <TableRow key={agendamento.id} className="hover:bg-slate-50">
                     <TableCell className="font-medium">{agendamento.cliente}</TableCell>
-                    <TableCell className="text-slate-600">{agendamento.sala}</TableCell>
+                    <TableCell className="text-slate-600">{agendamento.servico}</TableCell>
                     <TableCell className="text-slate-600">{agendamento.dataHora}</TableCell>
                     <TableCell>
                       <Badge className={statusInfo.className}>
