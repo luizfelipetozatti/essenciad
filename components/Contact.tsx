@@ -19,8 +19,18 @@ const Contact: React.FC = () => {
                 <p className="mb-4">
                 Araraquara - SP
                 </p>
-                <p className="mb-1"><span className="font-semibold">Telefone:</span> Entre em contato</p>
-                <p><span className="font-semibold">Instagram:</span> @essenciad</p>
+                <p className="mb-1"><span className="font-semibold">Telefone:</span> (16) 99772-5960</p>
+                <p className="mb-6">
+                  <span className="font-semibold">Instagram:</span>{' '}
+                  <a 
+                    href="https://www.instagram.com/essenciadestetica/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    @essenciad
+                  </a>
+                </p>
                  <a 
                   href="https://maps.app.goo.gl/FRm4TCK8vFdVL4Am7"
                   target="_blank"
